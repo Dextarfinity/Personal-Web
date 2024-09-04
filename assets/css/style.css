@@ -525,7 +525,6 @@ footer{
         top: 80px;
         position: fixed;
         left: -100%;
-
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -611,6 +610,9 @@ footer{
     .middle-footer .footer-menu{
         display: flex;
         font-size: 12px;
+    }
+    nav{
+        width: 100%;
     }
 }
 
