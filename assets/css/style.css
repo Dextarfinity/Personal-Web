@@ -605,6 +605,13 @@ footer{
     .input-field{
         width: 100%;
     }
+    .bottom-footer{
+        font-size: 10px;
+    }
+    .middle-footer .footer-menu{
+        display: flex;
+        font-size: 12px;
+    }
 }
 
 .btn {
