@@ -616,6 +616,9 @@ footer{
     nav{
         overflow-x: hidden;
     }
+    nav .nav-logo{
+        padding-right: 4vw;
+    }
     main{
         overflow-x: hidden;
     }
