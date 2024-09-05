@@ -614,6 +614,7 @@ footer{
         font-size: 12px;
     }
     nav .nav-menu-btn{
+        padding-left: 4vw;
         padding-right: 10vw;
     }
     main{
