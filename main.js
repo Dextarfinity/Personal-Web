@@ -1,4 +1,4 @@
-import "./input.css";
+import "./output.css";
 
 const ELE = document.documentElement;
 const mobileNav = document.getElementById("mobile-nav");
