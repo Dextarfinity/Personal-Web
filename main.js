@@ -1,4 +1,5 @@
 import "./output.css";
+import "./input.css";
 
 const ELE = document.documentElement;
 const mobileNav = document.getElementById("mobile-nav");
