@@ -1,4 +1,3 @@
-import "./output.css";
 import "./input.css";
 
 const ELE = document.documentElement;
