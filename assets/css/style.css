@@ -614,9 +614,9 @@ footer{
         font-size: 12px;
     }
     nav{
-        padding-inline-end: 30vw;
+        overflow-x: hidden;
     }
-    body, main{
+    main{
         overflow-x: hidden;
     }
 }
