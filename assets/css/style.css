@@ -613,8 +613,8 @@ footer{
         display: flex;
         font-size: 12px;
     }
-    nav .nav-logo{
-        padding-right: 14vw;
+    nav .nav-menu-btn{
+        padding-right: 10vw;
     }
     main{
         overflow-x: hidden;
