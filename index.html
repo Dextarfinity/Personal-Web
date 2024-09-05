@@ -1,222 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glomer Pimentel</title>
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script type="module" src="./supabaseUsage.js"></script>
-</head>
-<body>
-    <div class="container">
-        <!-- HEADER -->
-        <nav id="header">
-            <div class="nav-logo">
-                <div class="nav-name">Dex</div>
-                <span>.</span>
-            </div>
-            <div class="nav-menu" id="myNavMenu">
-                <ul class="nav_menu_list">
-                    <li class="nav_list">
-                        <a href="#home" class="nav-link">Home</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#about" class="nav-link">About</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#projects" class="nav-link">Projects</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#contact" class="nav-link">Contact</a>
-                        <div class="circle"></div>
-                    </li>
-                </ul>
-            </div>
-            <div class="nav-button">
-                <button class="btns" id="downloadButton">Download CV <i class="uil uil-file-alt"></i></button>
-            </div>
-            <div class="nav-menu-btn"><i class="uil uil-bars" onclick="myMenuFunction()"></i></div>
-        </nav>
-
-        <main class="wrapper">
-            <section class="featured-box" id="home">
-                <div class="featured-text">
-                    <div class="featured-text-card">
-                        <span class="typedTexts">Glomer Pimentel</span>
-                    </div>
-                    <div class="featured-name">
-                        <p>I'm <span class="typedText">Designer</span></p>
-                    </div>
-                    <div class="featured-text-info">
-                        <p>Experienced frontend developer with a passion of well user-friendly website creation.</p>
-                    </div>
-                    <div class="featured-text-btn">
-                        <button class="btns blue-btn" id="hireMeButton">Hire Me!</button>
-                        <button class="btns" id="downloadButton1">Download CV <i class="uil uil-file-alt"></i></button>
-                    </div>
-                    <div class="social_icons">
-                        <div class="icon"><i class="uil uil-facebook-f" onclick="myFacebook()"></i></div>
-                        <div class="icon"><i class="uil uil-instagram" onclick="myInstagram()"></i></div>
-                        <div class="icon"><i class="uil uil-github-alt" onclick="myGitHub()"></i></div>
-                        <div class="icon"><i class="uil uil-linkedin-alt" onclick="myLinkedIn()"></i></div>
-                    </div>
-                </div>
-                <div class="featured-image">
-                    <div class="image">
-                        <img src="assets/images/background.png" alt="avatar">
-                    </div>
-                </div>
-                <div class="scroll-icon-box">
-                    <a href="#about" class="scroll-btn">
-                        <i class="uil uil-mouse-alt"></i>
-                        <p>Scroll down...</p>
-                    </a>
-                </div>
-            </section>
-            <section class="section" id="about">
-                <div class="top-header">
-                    <h1>About Me</h1>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="about-info">
-                            <h3>My introduction</h3>
-                            <p>I am a well-versed in HTML, CSS, and JavaScript, and some of other frameworks and libraries, which allows me to implement interactive features. Additionally, I have experienced working as a Graphic Designer such as Adobe Illustrator, Photoshop, Premiere and After Effects</p>
-                            <div class="about-btn">
-                                <button class="btns" id="downloadButton2">Download CV <i class="uil uil-import"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="skills-box">
-                            <div class="skills-header">
-                                <h3>Frontend</h3>
-                            </div>
-                            <div class="skills-list">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>Bootstrap</span>
-                                <span>Tailwind</span>
-                                <span>JavaScript</span>
-                                <span>Vue</span>
-                            </div>
-                        </div>
-                        <div class="skills-box">
-                            <div class="skills-header">
-                                <h3>Backend</h3>
-                            </div>
-                            <div class="skills-list">
-                                <span>PHP</span>
-                                <span>JAVA</span>
-                                <span>PYTHON</span>
-                            </div>
-                        </div>
-                        <div class="skills-box">
-                            <div class="skills-header">
-                                <h3>Database</h3>
-                            </div>
-                            <div class="skills-list">
-                                <span>Supabase</span>
-                                <span>PostgreSQL</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section" id="projects">
-                <div class="top-header">
-                    <h1>Projects</h1>
-                </div>
-                <div class="project-container">
-                    <div class="project-box">
-                        <i class="uil uil-briefcase-alt"></i>
-                        <h3>Completed</h3>
-                        <label>4+ Finished Projects</label>
-                    </div>
-                    <div class="project-box">
-                        <i class="uil uil-users-alt"></i>
-                        <h3>Clients</h3>
-                        <label>3 Happy Clients</label>
-                    </div>
-                    <div class="project-box">
-                        <i class="uil uil-award"></i>
-                        <h3>Experience</h3>
-                        <label>Almost 4 years of field in Graphics Designer</label>
-                    </div>
-                </div>
-            </section>
-            <section class="section" id="contact">
-                <div class="top-header">
-                    <h1>Get in touch</h1>
-                    <span>Do you have a project in your mind, contact me here</span>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="contact-info">
-                            <h2>Find me <i class="uil uil-corner-right-down"></i></h2>
-                            <p class="emailcontact"><i class="uil uil-envelope"></i> Email: xdfeverharsh@gmail.com</p>
-                            <p><i class="uil uil-phone"></i> Tel: +639055441795</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-control">
-                            <div class="form-inputs">
-                                <input type="text" id="name" class="input-field" placeholder="Name" required>
-                                <input type="email" id="email" class="input-field" placeholder="Email" required>
-                            </div>
-                            <div class="text-area">
-                                <textarea id="message" placeholder="Message" required></textarea>
-                            </div>
-                            <div class="form-button">
-                                <button class="btn" id="sendButton">Send <i class="uil uil-message"></i></button>
-                            </div>
-                        </div>
-                    </div>                    
-                </div>
-            </section>
-        </main>
-        <footer>
-            <div class="top-footer">
-                <p>Glomer Pimentel.</p>
-            </div>
-            <div class="middle-footer">
-                <ul class="footer-menu">
-                    <li class="footer_menu_list">
-                        <a href="#home">Home</a>
-                    </li>
-                    <li class="footer_menu_list">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="footer_menu_list">
-                        <a href="#projects">Projects</a>
-                    </li>
-                    <li class="footer_menu_list">
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-social-icons">
-                <div class="icon"><i class="uil uil-facebook-f" onclick="myFacebook()"></i></div>
-                <div class="icon"><i class="uil uil-instagram" onclick="myInstagram()"></i></div>
-                <div class="icon"><i class="uil uil-github-alt" onclick="myGitHub()"></i></div>
-                <div class="icon"><i class="uil uil-linkedin-alt" onclick="myLinkedIn()"></i></div>
-            </div>
-            <div class="bottom-footer">
-                <p>Copyright &copy; <a href="#home" style="text-decoration: none; color: black;">Glomer Pimentel</a> - All rights reserved</p>
-            </div>
-        </footer>
-    </div>
-
-
-
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="assets/js/main.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-</body>
+  </head>
+  <body class="dark:text-gray-200 dark:bg-slate-900">
+    <header
+      class="fixed xl:block w-full py-4 lg:px-0 px-5 z-[999] duration-300"
+    >
+      <nav class="flex justify-between items-center max-w-6xl mx-auto px-2">
+        <div class="flex gap-4 items-center">
+
+          <div>
+            <h4 class="font-bold text-lg uppercase">Dex .</h4>
+          </div>
+        </div>
+        <ul class="gap-10 md:flex hidden hover:*:text-primary *:duration-200">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li class="theme-switch">
+            <i class="fa-solid fa-circle-half-stroke cursor-pointer"></i>
+          </li>
+        </ul>
+        <div class="flex items-center gap-6">
+          <a href="#contact">
+            <button class="btn btn-outline md:!flex !hidden">
+              <i class="fa-regular fa-paper-plane"></i> Email Me
+            </button>
+          </a>
+          <span class="theme-switch md:hidden">
+            <i class="fa-solid fa-circle-half-stroke cursor-pointer"></i>
+          </span>
+          <span id="menubar" class="cursor-pointer md:hidden text-xl">
+            <i class="fa-solid fa-bars"></i>
+          </span>
+        </div>
+      </nav>
+    </header>
+
+    <span
+      id="backdrop"
+      class="fixed h-screen hidden bg-black/10 backdrop-blur-sm z-[997] inset-0 w-full"
+    ></span>
+
+    <ul
+      id="mobile-nav"
+      class="gap-10 text-xl md:hidden dark:bg-slate-800 bg-primary text-white flex-center flex-col fixed w-full h-0 overflow-hidden bottom-0 duration-200 rounded-t-3xl left-0 z-[998]"
+    >
+      <li>
+        <a href="#home">Home</a>
+      </li>
+      <li>
+        <a href="#about">About</a>
+      </li>
+      <li>
+        <a href="#projects">Projects</a>
+      </li>
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+      <a href="#contact">
+        <button class="btn btn-outline">
+          <i class="fa-regular fa-paper-plane"></i> Email Me
+        </button>
+      </a>
+    </ul>
+
+    <!-- Home -->
+    <section
+      id="home"
+      class="homeall min-h-screen container grid place-items-center relative overflow-hidden before:absolute before:top-0 before:start-1/2 before:bg-heroLight before:bg-no-repeat before:bg-top before:size-full before:-z-[1] before:transform before:-translate-x-1/2 dark:before:bg-heroDark"
+    >
+      <div
+        class="w-full pt-20 grid md:grid-cols-6 h-full items-center max-w-6xl justify-around"
+      >
+        <div
+          class="lg:col-span-2 sm:pl-2 md:col-span-3 md:text-left text-center"
+        >
+          <div>
+            <h5 class="font-medium text-gray-600 dark:text-gray-200">
+              Hello Welcome
+            </h5>
+            <h1
+              class="sm:text-5xl text-4xl dark:text-white !leading-normal relative font-medium"
+            >
+              I'm <span class="text-primary typedText">Glomer</span> <br />
+              <span class="typedTexts">Website Designer</span>
+            </h1>
+            <button class="btn btn-filled mt-5">
+              <i class="fa-regular fa-envelope"></i> Hire Me
+            </button>
+            <button
+              class="font-semibold dark:text-gray-200 border-b-2 border-gray-700 ml-4"
+            >
+              <i class="fa-solid fa-up-right-from-square"></i> See Portfolio
+            </button>
+          </div>
+          <div class="md:w-96 md:ml-auto flex mt-9 gap-2 dark:text-gray-300">
+            <i class="fa-solid fa-border-all mt-0.5 md:inline-block hidden"></i>
+            <p class="text-xs text-balance leading-5 max-w-md px-2 mx-auto">
+              Experienced frontend developer with a passion of well user-friendly website creation.
+            </p>
+          </div>
+          <div
+            class="flex items-center md:justify-end justify-center dark:text-gray-200 text-gray-600 gap-6 mt-9"
+          >
+            <p class="text-xs">Visit my socials —</p>
+            <div class="flex justify-end gap-3">
+              <a href="#" class="social-icon">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="image lg:col-span-2 md:col-span-3">
+          <img
+            src="./assets/person.png"
+            class="w-2/3 mx-auto md:w-full max-w-96 md:mt-0 mt-5"
+            alt=""
+          />
+        </div>
+        <div
+          class="lg:col-span-2 md:col-span-6 lg:bg-gradient-to-l md:bg-none mt-2 bg-gradient-to-l dark:from-slate-800 from-gray-100 lg:h-96 md:h-auto h-96 w-full"
+        >
+          <ul
+            class="text-2xl data-[slot=count]:*:text-3xl data-[slot=count]:*:font-bold leading-[3.14rem] text-center pt-5 lg:block md:flex items-center justify-between"
+          >
+            <li data-slot="count">4+</li>
+            <li>Year of <span class="text-primary">Experience</span></li>
+            <br />
+            <li data-slot="count">4+</li>
+            <li>Completed <span class="text-primary">Projects</span></li>
+            <li>
+              <button class="btn btn-outline lg:mt-10 md:mt-0 mt-10">
+                <i class="fa-solid fa-download"></i> Download CV
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="container min-h-screen flex-center">
+      <div class="">
+        <div class="text-center text-balance aboutintro">
+          <h3>About me</h3>
+          <p class="px-2 mt-3 text-gray-500">
+            I am a well-versed in HTML, CSS, and JavaScript, and some of other frameworks and libraries, which allows me to implement interactive features. Additionally, I have experienced working as a Graphic Designer such as Adobe Illustrator, Photoshop, Premiere and After Effects.
+          </p>
+        </div>
+        <div
+          class="max-w-2xl grid md:grid-cols-1 gap-6 px-2 sm:grid-cols-3 *:text-lg *:sm:max-w-full *:max-w-sm hover:*:brightness-90 *:mx-auto *:sm:text-left *:text-center *:hover:cursor-pointer *:shadow-sm mt-10 mx-auto *:rounded-xl *:bg-gray-100 *:dark:bg-slate-800 *:p-7 *:flex *:md:flex-row *:flex-col *:items-center *:gap-12"
+        >
+          <div class="about1">
+            <div class="*:text-primary">
+              <i class="fa-solid fa-pen-nib"></i>
+              <h6 class="font-semibold whitespace-nowrap mt-3">
+                Frontend
+              </h6>
+            </div>
+            <div>
+              <p
+                class="text-xs text-gray-600 dark:text-gray-400 leading-5 text-balance"
+              >
+                I am well on using HTML, CSS, Bootstrap, Tailwind, JavaScript, and Vue when it comes to frontend.
+              </p>
+            </div>
+            <i class="fa-solid fa-font text-primary cursor-pointer"></i>
+          </div>
+          <div class="about2">
+            <div class="*:text-primary">
+              <i class="fa-regular fa-object-ungroup"></i>
+              <h6 class="font-semibold whitespace-nowrap mt-3">Backend</h6>
+            </div>
+            <div>
+              <p
+                class="text-xs text-gray-600 dark:text-gray-400 leading-5 text-balance"
+              >
+              I don't have much expertise on backends but I am well on using PHP, Java and Python when it comes to backend.
+              </p>
+            </div>
+            <i class="fa-brands fa-squarespace cursor-pointer text-primary"></i>
+          </div>
+          <div class="about3">
+            <div class="*:text-primary">
+              <i class="fa-solid fa-chart-simple"></i>
+              <h6 class="font-semibold whitespace-nowrap mt-3">Database</h6>
+            </div>
+            <div>
+              <p
+                class="text-xs text-gray-600 dark:text-gray-400 leading-5 text-balance"
+              >
+              I don't have much expertise on databases but I am well on using Supabase and PostgreSQL when it comes to database systems.
+              </p>
+            </div>
+            <i class="fa-solid fa-chart-pie text-primary cursor-pointer"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container min-h-screen flex-center">
+      <div class="text-center text-balance text-gray-800 dark:text-gray-200">
+        <h3 class="projecthead">Projects</h3>
+        <br />
+        <br />
+        <div class="project-container">
+          <div class="project-box text-primary dark:text-white  bg-white dark:bg-gray-700 project1">
+            <i class="fa-solid fa-briefcase text-primary dark:text-white"></i>
+            <h3 class="text-gray-800 dark:text-white">Completed</h3>
+            <label class="text-gray-600 dark:text-gray-300">4+ Finished Projects</label>
+          </div>
+          <div class="project-box  bg-white dark:bg-gray-700 project2">
+            <i class="fa-regular fa-user text-gray-800 dark:text-white "></i>
+            <h3 class="text-gray-800 dark:text-white">Clients</h3>
+            <label class="text-gray-600 dark:text-gray-300">3 Happy Clients</label>
+          </div>
+          <div class="project-box  bg-white dark:bg-gray-700 project3">
+            <i class="fa-solid fa-award text-gray-800 dark:text-white"></i>
+            <h3 class="text-gray-800 dark:text-white">Experience</h3>
+            <label class="text-gray-600 dark:text-gray-300">Almost 4 years of field in Graphics Designer</label>
+          </div>
+        </div>
+      </div>
+    </section>
+     
+
+    <!-- Contact -->
+    <section
+      id="contact"
+      class="container relative max-w-4xl mx-auto min-h-screen flex-center px-5"
+    >
+      <div class="pb-10">
+        <div class="text-center contacthead">
+          <h3>Contact Me</h3>
+          <p class="px-2 mt-3 text-gray-500">
+            Looking for a web designer to create a sleek, modern, and user-friendly site? I specialize in building websites that not only look great but also work seamlessly across all devices. Whether you need a portfolio, e-commerce, or a business site, I can help you create something unique that truly represents your brand.
+
+            Feel free to get in touch to discuss your project, get a quote, or ask any questions! Let's make your online presence stand out.
+          </p>
+        </div>
+        <div
+          class="mt-12 md:relative flex flex-col gap-5 sm:max-w-full mx-auto max-w-xs contactdiv"
+        >
+          <div
+            class="dark:bg-slate-800 bg-slate-50 dark:text-gray-100 text-gray-800 rounded-lg shadow-xl mx-auto md:w-2/3 py-14 px-7 w-full"
+          >
+            <h3 class="font-semibold text-3xl">
+              Send Me A <br /><span class="text-primary">Message</span>
+            </h3>
+            <form class="*:flex *:flex-col *:gap-1 mt-5 md:w-2/3 w-full">
+              <div class="">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" />
+              </div>
+              <div class="">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Enter your email address"
+                />
+              </div>
+              <div class="">
+                <label for="msg">Message</label>
+                <textarea id="msg" placeholder="Enter your message"></textarea>
+              </div>
+              <button class="btn btn-filled ml-auto">Send</button>
+            </form>
+          </div>
+          <div
+            class="dark:bg-gray-700 bg-white py-12 px-7 md:absolute lg:-right-9 right-28 rounded-xl shadow-xl md:w-2/5 h-5/6 top-28 w-full mx-auto"
+          >
+            <h3 class="font-semibold text-2xl border-b pb-4 border-gray-600">
+              Find or Visit Me <span class="text-primary">.</span><i class="text-primary fa-solid fa-turn-down"></i>
+            </h3>
+            <div class="py-4">
+              <ul class="*:flex *:gap-4 *:items-center *:mt-4">
+                <li>
+                  <i class="fa-solid fa-location-dot"></i>
+                  <div>
+                    <h2>Butuan City, Agusan del Norte</h2>
+                    <address class="text-xs">Lumina Homes, Taguibo</address>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-envelope"></i>
+                  <p>xdfeverharsh@gmail.com</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-phone"></i>
+                  <p>+63 905 544 1795</p>
+                </li>
+              </ul>
+              <div
+                class="flex items-center md:justify-end justify-center dark:text-gray-200 text-gray-600 gap-6 mt-9"
+              >
+                <p class="text-xs">Visit my socials</p>
+                <div class="flex justify-end gap-3">
+                  <a href="#" class="social-icon">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                  <a href="#" class="social-icon">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a href="#" class="social-icon">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="dark:bg-slate-700 bg-slate-100 text-center py-2">
+      Copyright &copy; Glomer Pimentel - All rights reserved
+      <ul class="flex-center gap-5 py-4 text-sm">
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li><a href="#projects">Projects</a></li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+    <script>
+      const header = document.querySelector("header");
+
+      const toggleClasses = (element, classes, condition) => {
+        classes.forEach((className) => {
+          element.classList.toggle(className, condition);
+        });
+      };
+
+      window.addEventListener("scroll", () => {
+        toggleClasses(
+          header,
+          [
+            "shadow-lg",
+            "dark:sm:bg-slate-900",
+            "dark:bg-slate-800",
+            "dark:text-white",
+            "bg-white",
+          ],
+          window.scrollY > 0
+        );
+      });
+    </script>
+    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  </body>
 </html>
