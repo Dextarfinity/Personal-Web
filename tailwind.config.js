@@ -29,3 +29,7 @@ export default {
   },
   plugins: [],
 };
+
+module.exports = {
+  purge: ['./assets/**/*.css'], // Add custom CSS file paths here
+}
