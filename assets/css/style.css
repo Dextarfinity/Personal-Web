@@ -614,10 +614,13 @@ footer{
         font-size: 12px;
     }
     nav .nav-logo{
-        padding-right: 4vw;
+        padding-right: 14vw;
     }
     main{
         overflow-x: hidden;
+    }
+    .contact-info .emailcontact{
+        font-size: 12px;
     }
 }
 
