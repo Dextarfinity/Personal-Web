@@ -79,6 +79,25 @@ textarea {
 .typedTexts{
     text-transform: capitalize;
 }
+.smallimage{
+    width: 380px;
+    height: 380px;
+    border-radius: 55% 45% 55% 45%;
+    overflow: hidden;
+    animation: imgFloat 7s ease-in-out infinite;
+}
+@keyframes imgFloats {
+    50%{
+        transform: translateY(10px);
+        border-radius: 45% 55% 45% 55%;
+    }
+}
+.smallimage img{
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+}
+
 .image{
     margin: auto 0;
     width: 380px;
@@ -195,10 +214,6 @@ textarea {
     .featured-text{
         padding: 0;
     }
-    image, image img{
-        width: 320px;
-        height: 320px;
-    }
 }
 
 
@@ -252,10 +267,6 @@ textarea {
         min-height: 150px;
         width: 100%;
         margin-top: 65px;
-    }
-    .image, .image img{
-        width: 150px;
-        height: 150px;
     }
     .row{
         display: flex;
