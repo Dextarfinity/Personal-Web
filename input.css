@@ -261,24 +261,6 @@ textarea {
     .social_icons{
         margin-top: 2em;
     }
-    .featured-image{
-        order: 1;
-        justify-content: center;
-        min-height: 150px;
-        width: 100%;
-        margin-top: 65px;
-    }
-    .row{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 50px;
-    }
-    .col{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
     .about-info, .contact-info{
         width: 100%;
     }
