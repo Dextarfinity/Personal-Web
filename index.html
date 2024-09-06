@@ -19,6 +19,15 @@
   </head>
   <body class="dark:text-gray-200 dark:bg-slate-900">
     <style>   
+    
+@media only screen and (max-width:540px){
+    main{
+        overflow-x: hidden;
+    }
+    .mobile-navbar{
+      overflow-x: hidden;
+    }
+  }
     .image {
     margin: auto 0;
     width: 380px;
@@ -85,7 +94,7 @@
 
     <ul
       id="mobile-nav"
-      class="gap-10 text-xl md:hidden dark:bg-slate-800 bg-primary text-white flex-center flex-col fixed w-full h-0 overflow-hidden bottom-0 duration-200 rounded-t-3xl left-0 z-[998]"
+      class="mobile-navbar gap-10 text-xl md:hidden dark:bg-slate-800 bg-primary text-white flex-center flex-col fixed w-full h-0 overflow-hidden bottom-0 duration-200 rounded-t-3xl left-0 z-[998]"
     >
       <li>
         <a href="#home">Home</a>
