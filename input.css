@@ -60,7 +60,9 @@ textarea {
   @apply border dark:border-gray-500 rounded placeholder:text-sm font-Poppins outline-none py-2 px-3 mb-4 resize-none bg-transparent;
 }
 
-
+body{
+    overflow-x: hidden;
+}
 
 :root {
     --body-color: rgb(250, 250, 250);
@@ -281,7 +283,7 @@ textarea {
         padding-inline: 12vw;
     }
     main{
-        overflow-x: visible;
+        overflow-x: hidden;
     }
     .contact-info .emailcontact{
         font-size: 12px;
