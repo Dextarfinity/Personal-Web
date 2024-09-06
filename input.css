@@ -281,7 +281,7 @@ textarea {
         padding-inline: 12vw;
     }
     main{
-        overflow-x: hidden;
+        overflow-x: visible;
     }
     .contact-info .emailcontact{
         font-size: 12px;
