@@ -18,26 +18,22 @@
     <link rel="stylesheet" href="./output.css">
   </head>
   <body class="dark:text-gray-200 dark:bg-slate-900">
-    <style>    
-        .image{
-            margin: auto 0;
-            width: 380px;
-            height: 380px;
-            border-radius: 55% 45% 55% 45%;
-            animation: imgFloat 7s ease-in-out infinite;
-        }
-        .image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Or contain, depending on how you want the image to behave */
-            object-position: top; /* Keep the top part visible */
-        }
-        @keyframes imgFloat {
-            50%{
-                transform: translateY(10px);
-                border-radius: 45% 55% 45% 55%;
-            }
-        }
+    <style>   
+    .image {
+    margin: auto 0;
+    width: 380px;
+    height: 380px;
+    overflow: hidden; /* Ensure no overflow if cropping */
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover ensures the image covers the container while preserving aspect ratio */
+    object-position: top; /* Keeps the top part visible */
+}
+
+
     </style>
     <header
       class="fixed xl:block w-full py-4 lg:px-0 px-5 z-[999] duration-300"
@@ -163,13 +159,12 @@
             </div>
           </div>
         </div>
-          <div class="lg:col-span-2 md:col-span-3 image">
-            <img
-              src="./assets/person.png"
-              class="w-2/3 mx-auto md:w-full max-w-100 md:mt-0 mt-5"
-              alt=""
-            />
-          </div>
+            <div class="lg:col-span-2 md:col-span-3 image">
+              <img
+                src="./assets/person.png"
+                alt=""
+              />
+            </div>
         <div
           class="lg:col-span-2 md:col-span-6 lg:bg-gradient-to-l md:bg-none mt-9 bg-gradient-to-l dark:from-slate-800 from-gray-100 lg:h-96 md:h-auto h-96 w-full"
         >

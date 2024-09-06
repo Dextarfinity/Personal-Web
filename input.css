@@ -85,14 +85,13 @@ textarea {
     width: 380px;
     height: 380px;
     border-radius: 55% 45% 55% 45%;
-    overflow: hidden;
     animation: imgFloat 7s ease-in-out infinite;
 }
-.image img{
-    width: 380px;
-    height: 380px;
-    object-fit: cover;
-    display: block;
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Or contain, depending on how you want the image to behave */
+    object-position: center; /* Keep the top part visible */
 }
 @keyframes imgFloat {
     50%{
