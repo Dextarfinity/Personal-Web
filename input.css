@@ -80,7 +80,6 @@ textarea {
     text-transform: capitalize;
 }
 
-
 .image{
     margin: auto 0;
     width: 380px;
@@ -93,6 +92,7 @@ textarea {
     width: 380px;
     height: 380px;
     object-fit: cover;
+    display: block;
 }
 @keyframes imgFloat {
     50%{
