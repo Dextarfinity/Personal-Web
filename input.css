@@ -79,24 +79,7 @@ textarea {
 .typedTexts{
     text-transform: capitalize;
 }
-.smallimage{
-    width: 380px;
-    height: 380px;
-    border-radius: 55% 45% 55% 45%;
-    overflow: hidden;
-    animation: imgFloat 7s ease-in-out infinite;
-}
-@keyframes imgFloats {
-    50%{
-        transform: translateY(10px);
-        border-radius: 45% 55% 45% 55%;
-    }
-}
-.smallimage img{
-    width: 380px;
-    height: 380px;
-    object-fit: cover;
-}
+
 
 .image{
     margin: auto 0;
@@ -208,14 +191,12 @@ textarea {
 }
 
 
-
 /* RESPONSIVENESS */
 @media only screen and (max-width:1024px){
     .featured-text{
         padding: 0;
     }
 }
-
 
 @media only screen and (max-width:900px){
     .nav-button{
@@ -270,9 +251,12 @@ textarea {
     .project-box{
         width: 80%;
     }
+    /* Set .image img size to 380px for medium screens */
+    .image img{
+        width: 380px;
+        height: 380px;
+    }
 }
-
-
 
 @media only screen and (max-width:540px){
     .featured-name{
@@ -302,5 +286,10 @@ textarea {
     }
     .contact-info .emailcontact{
         font-size: 12px;
+    }
+    /* Set .image img size to 380px for small screens */
+    .image img{
+        width: 380px;
+        height: 380px;
     }
 }

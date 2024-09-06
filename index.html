@@ -18,6 +18,30 @@
     <link rel="stylesheet" href="./output.css">
   </head>
   <body class="dark:text-gray-200 dark:bg-slate-900">
+    <style>
+      
+.image{
+    margin: auto 0;
+    width: 380px;
+    height: 380px;
+    border-radius: 55% 45% 55% 45%;
+    overflow: hidden;
+    animation: imgFloat 7s ease-in-out infinite;
+}
+.image img{
+    width: 380px;
+    height: 380px;
+    object-fit: contain;
+}
+@keyframes imgFloat {
+    50%{
+        transform: translateY(10px);
+        border-radius: 45% 55% 45% 55%;
+    }
+}
+
+
+    </style>
     <header
       class="fixed xl:block w-full py-4 lg:px-0 px-5 z-[999] duration-300"
     >
