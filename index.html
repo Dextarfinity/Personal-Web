@@ -146,11 +146,12 @@
               I'm <span class="text-primary typedText"></span> <br />
               <span class="typedTexts"></span>
             </h1>
-            <button class="btn btn-filled mt-5">
+            <button class="btn btn-filled mt-5" id="hireMeButton">
               <i class="fa-regular fa-envelope"></i> Hire Me
             </button>
             <button
               class="font-semibold dark:text-gray-200 border-b-2 border-gray-700 ml-4"
+              id="portfolioButton"
             >
               <i class="fa-solid fa-up-right-from-square"></i> See Portfolio
             </button>
@@ -166,13 +167,13 @@
           >
             <p class="text-xs">Visit my socials —</p>
             <div class="flex justify-end gap-3">
-              <a href="#" class="social-icon">
+              <a href="https://www.github.com/Dextarfinity" class="social-icon">
                 <i class="fa-brands fa-github"></i>
               </a>
-              <a href="#" class="social-icon">
+              <a href="https://www.linkedin.com/in/dexter-pimentel-07302a2a7/" class="social-icon">
                 <i class="fa-brands fa-linkedin"></i>
               </a>
-              <a href="#" class="social-icon">
+              <a href="https://www.facebook.com/glomer.pimentel" class="social-icon">
                 <i class="fa-brands fa-facebook"></i>
               </a>
             </div>
@@ -198,7 +199,7 @@
             <li data-slot="count">4+</li>
             <li>Completed <span class="text-primary">Projects</span></li>
             <li>
-              <button class="btn btn-outline lg:mt-10 md:mt-0 mt-10">
+              <button class="btn btn-outline lg:mt-10 md:mt-0 mt-10" id="downloadButton">
                 <i class="fa-solid fa-download"></i> Download CV
               </button>
             </li>
@@ -331,9 +332,9 @@
               </div>
               <div class="">
                 <label for="msg">Message</label>
-                <textarea id="msg" placeholder="Enter your message"></textarea>
+                <textarea id="message" placeholder="Enter your message"></textarea>
               </div>
-              <button class="btn btn-filled ml-auto">Send</button>
+              <button class="btn btn-filled ml-auto" id="sendButton">Send</button>
             </form>
           </div>
           <div

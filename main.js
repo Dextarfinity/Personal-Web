@@ -1,6 +1,7 @@
 import "./output.css";
 import Typed from "typed.js";
 import ScrollReveal from "scrollreveal";
+import { supabase } from "./supabaseClient.js";
 
 // Theme switching
 const ELE = document.documentElement;
@@ -120,3 +121,87 @@ srRight.reveal(".project1", { delay: 400 });
 srRight.reveal(".project2", { delay: 200 });
 srRight.reveal(".project3", { delay: 50 });
 srRight.reveal(".lastpart", { delay: 100 });
+
+// ===== BUTTON HANDLERS =====
+
+// Download CV Button
+document.getElementById("downloadButton").addEventListener("click", () => {
+  const link = document.createElement("a");
+  link.href = "assets/Glomer Pimentel Cover Letter.pdf";
+  link.download = "Glomer Pimentel Cover Letter.pdf";
+  link.click();
+});
+
+// Hire Me Button
+document.getElementById("hireMeButton").addEventListener("click", () => {
+  const email = "xdfeverharsh@gmail.com";
+  const subject = "Hiring Inquiry";
+  const body = "Hello, I would like to hire you for...";
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`;
+  window.location.href = gmailLink;
+});
+
+// Contact Form Submit
+document.getElementById("sendButton").addEventListener("click", async (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  // Validate inputs
+  if (!name || !email || !message) {
+    alert("Please fill out all fields.");
+    return;
+  }
+
+  const sendButton = document.getElementById("sendButton");
+  sendButton.disabled = true;
+
+  try {
+    // Insert data into Supabase
+    const { data, error } = await supabase
+      .from("emails")
+      .insert([{ name: name, email: email, message: message }]);
+
+    if (error) {
+      console.error("Error:", error);
+      alert("There was an error sending your message.");
+      sendButton.disabled = false;
+    } else {
+      // Success
+      sendButton.innerHTML =
+        'Sent <i class="fa-solid fa-check"></i>';
+      sendButton.classList.add("opacity-50");
+
+      // Clear form
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+
+      // Reset button after 3 seconds
+      setTimeout(() => {
+        sendButton.disabled = false;
+        sendButton.innerHTML = "Send";
+        sendButton.classList.remove("opacity-50");
+      }, 3000);
+    }
+  } catch (err) {
+    console.error("Error:", err);
+    alert("There was an error sending your message.");
+    sendButton.disabled = false;
+  }
+});
+
+// Social Media Links
+document.querySelectorAll(".social-icon").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const href = link.getAttribute("href");
+    if (href && href !== "#") {
+      window.location.href = href;
+    }
+  });
+});
