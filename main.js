@@ -1,20 +1,34 @@
 import "./output.css";
+import Typed from "typed.js";
+import ScrollReveal from "scrollreveal";
 
+// Theme switching
 const ELE = document.documentElement;
+const savedTheme = localStorage.getItem("theme");
+
+// Initialize theme
+if (savedTheme) {
+  ELE.classList.add(savedTheme);
+} else {
+  // Default to light theme if no saved preference
+  localStorage.setItem("theme", "light");
+}
+
+// Theme switch listeners
+document.querySelectorAll(".theme-switch").forEach((item) =>
+  item.addEventListener("click", () => {
+    ELE.classList.toggle("dark");
+    const isDark = ELE.classList.contains("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  })
+);
+
+// Mobile navigation
 const mobileNav = document.getElementById("mobile-nav");
 const mobileNavItem = document.querySelectorAll("#mobile-nav li");
 const backDrop = document.getElementById("backdrop");
 const menuBar = document.querySelector("#menubar");
 const menuBarIcon = document.querySelector("#menubar i");
-
-document.querySelectorAll(".theme-switch").forEach((item) =>
-  item.addEventListener("click", () => {
-    ELE.classList.toggle("dark");
-    ELE.classList.contains("dark")
-      ? localStorage.setItem("theme", "dark")
-      : localStorage.setItem("theme", "light");
-  })
-);
 
 const options = [backDrop, menuBar, ...mobileNavItem];
 
@@ -29,67 +43,80 @@ options.forEach((item) =>
   })
 );
 
-ELE.classList.add(localStorage.getItem("theme"));
+// Header scroll effect
+const header = document.querySelector("header");
 
-var typingEffect = new Typed(".typedTexts",{
-  strings : ["Video Editor", "Logo Creator", "Developer", "Web Designer", " "],
-  loop : true,
-  typeSpeed : 120,
-  backSpeed : 80,
-  backDelay : 2000
-})
+const toggleClasses = (element, classes, condition) => {
+  classes.forEach((className) => {
+    element.classList.toggle(className, condition);
+  });
+};
 
-var typingEffect = new Typed(".typedText",{
-  strings : ["Dexter", "Glomer", "Dexter", " "],
-  loop : true,
-  typeSpeed : 100,
-  backSpeed : 80,
-  backDelay : 2000
-})
+window.addEventListener("scroll", () => {
+  toggleClasses(
+    header,
+    [
+      "shadow-lg",
+      "dark:sm:bg-slate-900",
+      "dark:bg-slate-800",
+      "dark:text-white",
+      "bg-white",
+    ],
+    window.scrollY > 0
+  );
+});
 
+// Typed.js animations
+new Typed(".typedTexts", {
+  strings: ["Video Editor", "Logo Creator", "Developer", "Web Designer", " "],
+  loop: true,
+  typeSpeed: 120,
+  backSpeed: 80,
+  backDelay: 2000,
+});
 
+new Typed(".typedText", {
+  strings: ["Dexter", "Glomer", "Dexter", " "],
+  loop: true,
+  typeSpeed: 100,
+  backSpeed: 80,
+  backDelay: 2000,
+});
 
-/* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
+// ScrollReveal animations
 const sr = ScrollReveal({
-  origin: 'top',
-  distance: '80px',
+  origin: "top",
+  distance: "80px",
   duration: 2000,
-  reset: true     
-})
+  reset: true,
+});
 
-/* -- HOME -- */
-sr.reveal('header',{})
-sr.reveal('.homeall',{delay: 100})
-sr.reveal('.projecthead',{delay: 100})
-sr.reveal('.contacthead',{delay: 100})
-sr.reveal('.contactdiv',{delay: 300})
+sr.reveal("header", {});
+sr.reveal(".homeall", { delay: 100 });
+sr.reveal(".projecthead", { delay: 100 });
+sr.reveal(".contacthead", { delay: 100 });
+sr.reveal(".contactdiv", { delay: 300 });
+sr.reveal(".aboutintro", { interval: 200 });
 
-
-/* -- PROJECT BOX -- */
-sr.reveal('.aboutintro',{interval: 200})
-
-/* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
-
-/* -- ABOUT INFO & CONTACT INFO -- */
 const srLeft = ScrollReveal({
-origin: 'left',
-distance: '80px',
-duration: 2000,
-reset: true
-})
+  origin: "left",
+  distance: "80px",
+  duration: 2000,
+  reset: true,
+});
 
-srLeft.reveal('.about1',{delay: 200})
-srLeft.reveal('.about3',{delay: 200})
+srLeft.reveal(".about1", { delay: 200 });
+srLeft.reveal(".about3", { delay: 200 });
 
-/* -- ABOUT SKILLS & FORM BOX -- */
 const srRight = ScrollReveal({
-origin: 'right',
-distance: '80px',
-duration: 2000,
-reset: true
-})
+  origin: "right",
+  distance: "80px",
+  duration: 2000,
+  reset: true,
+});
 
-srRight.reveal('.about2',{delay: 200})
-srRight.reveal('.project1',{delay: 400})
-srRight.reveal('.project2',{delay: 200})
-srRight.reveal('.project3',{delay: 50})
+srRight.reveal(".about2", { delay: 200 });
+srRight.reveal(".project1", { delay: 400 });
+srRight.reveal(".project2", { delay: 200 });
+srRight.reveal(".project3", { delay: 50 });
+srRight.reveal(".lastpart", { delay: 100 });
